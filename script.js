@@ -77,7 +77,7 @@ runOnce(2,3); */
 
 // 2623. Memoize
 
-function memoize(fn) {
+/* function memoize(fn) {
     let cache = {};
     return function(...args) {
        const key = JSON.stringify(args);
@@ -98,8 +98,41 @@ const memoizedSum = memoize(sum);
 
 console.log(memoizedSum(2, 3)); 
 console.log(memoizedSum(2, 3)); 
-console.log(memoizedSum(3, 2)); 
+console.log(memoizedSum(3, 2));  */
+
+/* function smallestMult(n) {
+ let primes = [];
+  for (let i = 2; i <= n; i++) {
+    let isPrime = true;
+    for (let j = 2; j <= Math.sqrt(i); j++) {
+      if (i % j === 0) {
+        isPrime = false;
+        break;
+      }
+    }
+    if (isPrime) {
+      primes.push(i);
+    }
+  }
+  let result = 1;
+
+for (let i = 0; i < primes.length; i++) {
+   let p = primes[i];
+  let maxPower = Math.floor(Math.log(n) / Math.log(p));
+  result *= Math.pow(p, maxPower);
+}
+ return result;
+
+}
+smallestMult(20); // 2,3,5,7,11,13,17,19
+ */
 
 
- 
+// Problem 6: Sum square difference freecodecamp 
 
+function sumSquareDifference(n) {
+console.log(n);
+  return true;
+}
+
+sumSquareDifference(100);
