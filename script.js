@@ -261,7 +261,7 @@ return primeArray[num] === 1;
 }
 isPrime(324); */
 
-function primeSummation(n) {
+/* function primeSummation(n) {
 let sum = 0;
 for(let i = 2; i < n; i++){
 if(isPrime(i)){
@@ -271,4 +271,97 @@ sum += i;
 return sum;
 }
 
-primeSummation(17);
+primeSummation(17);*/
+
+
+/* const data = [
+  [835, 750, 876],
+  [1, 93, 731],
+  [7, 59, 72],
+  [934, 926, 915],
+  [56, 61, 55],
+  [99, 8, 18],
+  [8, 20, 14],
+  [1, 7, 17],
+  [77, 138, 85],
+  [38, 34, 620],
+  [12, 22, 4],
+  [6, 103, 24],
+  [95, 371, 94],
+  [106, 64, 63],
+  [113, 203, 1099],
+  [679, 1206, 2],
+  [63, 102, 105],
+  [346, 353, 362],
+  [988, 1045, 620],
+  [846, 9, 771]
+];
+
+const sorted = data.map(innerArray => quickSort(innerArray));
+
+
+function quickSort(arr) {
+ if(arr.length === 0 || arr.length === 1) return arr;
+ let pivot = arr[arr.length - 1];
+ const left = [];
+ const right = [];
+ for(let i = 0; i < arr.length - 1; i++){
+    if(arr[i] < pivot){
+            left.push(arr[i]);
+        }else{
+            right.push(arr[i]);
+        }
+ }
+ return [...quickSort(left), pivot, ...quickSort(right)];
+}
+
+const median = sorted.map(innerArray => innerArray[1]);
+console.log(median); */
+
+/* const data = [
+  [76, 1.50],
+  [99, 2.12],
+  [44, 1.14],
+  [60, 1.62],
+  [58, 2.30],
+  [94, 2.29],
+  [95, 2.30],
+  [59, 2.13],
+  [88, 2.00],
+  [78, 2.03],
+  [105, 1.76],
+  [92, 2.04],
+  [83, 1.90],
+  [114, 2.96],
+  [59, 1.32],
+  [71, 1.72],
+  [119, 2.06],
+  [110, 3.03],
+  [100, 2.77],
+  [74, 2.09],
+  [88, 1.54],
+  [47, 1.14],
+  [113, 1.91],
+  [92, 1.60],
+  [65, 1.80],
+  [65, 1.52]
+];
+const result = [];
+data.map(innerArray => {
+    let weight = innerArray[0];
+    let height = innerArray[1];
+    let BMI = weight / Math.pow(height, 2);
+    if(BMI < 18.5){
+        result.push("under");
+    }
+    else if(BMI >= 18.5 && BMI <= 24.9){
+        result.push("normal");
+    }
+    else if(BMI >= 25 && BMI <= 29.9){
+        result.push("over");
+    }else{
+        result.push("obese");
+    }
+});
+console.log(result.join(' ')); */
+
